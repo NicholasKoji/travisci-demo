@@ -1,0 +1,14 @@
+# 设置运行环境
+language: node_js
+# 使用node最新稳定版
+node_js:
+  - node
+# 启用yarn安装的包缓存
+cache:
+  yarn: true
+# 下载需要的包
+install:
+  - yarn install
+# 使用npm命令打包
+script:
+  - npm run build
