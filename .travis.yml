@@ -12,3 +12,16 @@ install:
 # 使用npm命令打包
 script:
   - npm run build
+# 发布到github pages
+deploy:
+  provider: pages
+  skip_cleanup: true
+  # 配置要推送到github pages的目录，默认是当前目录
+  local_dir: dist/
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  # 是否进行缓存
+  keep_history: false
+  name: "NicholasKoji"
+  email: "1606833007@qq.com"
+  on:
+    branch: master
